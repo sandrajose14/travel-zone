@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap-link -->
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/png;base64,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">
+</head>
+<body>
+    <!-- navbar-start -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo"><span>T</span>ravel<span>Z</span>one</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#book">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#packages">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#gallary">Gallary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#about">About</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary"type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+     <!-------- home section ------>
+     <div class="home">
+      <div class="content">
+        <h5>Travel the world</h5>
+        <h1>Visit <span class="changecontent"></span></h1>
+        <p>A journey of a thousand miles begins with a single step</p>
+        <a href="#book">Book Place</a>
+      </div>
+     </div>
+     <!-- book start -->
+     <section class="book" id="book">
+      <div class="container">
+        <div class="main-text">
+          <h1><span>B</span>ook</h1>
+        </div>
+        <div class="row">
+
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+              <img src="images/bookimg.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 py-md-0">
+            <form action="#">
+              <input type="text" class="form-control" placeholder="Where To" required><br>
+              <input type="text" class="form-control" placeholder="How Many" required><br>
+              <input type="date" class="form-control" placeholder="Arrivals" required><br>
+              <input type="date" class="form-control" placeholder="Leaving" required><br>
+              <textarea class="form-control" rows="5" name="text" placeholder="Enter Your Name & Details" required></textarea><br>
+              <input type="submit" value="Book Now" class="submit" required>
+            </form>
+          </div>
+        </div>
+
+      </div>
+     </section>
+     <!-- section-packages -->
+    <section class="packages" id="packages">
+      <div class="container">
+        <div class="main-txt">
+          <h1><span>P</span>ackages</h1>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="images/france.jpg" alt="">
+              <div class="card-body">
+                <h3>FRANCE</h3>
+                <P>France is known all around the world for Paris and its monuments such as the Eiffel Tower and the Notre-Dame cathedral. French people are very passionate about their culture and art, which is showcased in many museums like the Louvre.</P>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="images/DU.jpg" class="img-1" alt="">
+              <div class="card-body">
+                <h3>DUBAI</h3>
+                <P>Dubai is surrounded by the glittering waters of the Gulf, which helps give the city those immense skies and incredible sense of light. Water is also a key means of transport whether that's setting sail along the coast or traversing Dubai Creek on a traditional wooden abra.</P>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$400</strong></h6>
+                <a href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="images/sp.jpg"class="img-2" alt="">
+              <div class="card-body">
+                <h3>SPAIN</h3>
+                <P>Besides being world famous for its football, Spain is also known because of its culinary art, bullfights, architecture, beaches, etc. If you are planning to visit here, you must carry some cash in their official currency, which is Euro.
+                  It has a National Anthem with no Words.</P>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Price: <strong>$300</strong></h6>
+                <a href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="images/america.jpg" alt="">
+              <div class="card-body">
+                <h3>UNITED STATES</h3>
+                <P>Don't miss out on highlights like the Grand Canyon, Yosemite and Yellowstone national parks. As one reader remarked, “the USA has so many staggeringly beautiful National Parks” (discover our top 40), while another praised “the majesty of the mountains, and the lure of two beuty oceans.”</P>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h6>Price: <strong>$800</strong></h6>
+                <a href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="images/pak.jpg" class="img-3" alt="">
+              <div class="card-body">
+                <h3>PAKISTAN</h3>
+                <P>This part of the country is famous all around the world because of sky high mountains, lush green valleys, mighty rivers, beautiful lakes, and amazing wildlife. The Pradise on Earth 'Neelum Valley' Mini Switzerland 'Swat Valley' and Mountain Kingdom 'Hunza valley' are the major tourist attractions in Pakistan.</P>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="images/mal.jpg"class="img-2" alt="">
+              <div class="card-body">
+                <h3>MALDIVES</h3>
+                <P>Once the sun starts to sink into the Indian Ocean, the time is right for sunset champagne cruises accompanied by leaping dolphins or for romantic candle-lit dinners at the beach. The Maldives is always named as a honeymoon spot and as one of the most romantic destinations in the world.</P>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h6>Price: <strong>$300</strong></h6>
+                <a href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- section-services -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="main-txt">
+          <h1><span>S</span>ervices</h1>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <i class="fas fa-hotel"></i>
+            <div class="card-body">
+              <h3>Affordable Hotel</h3>
+              <p>These include cleanliness both for rooms and public areas, free and fast wifi, comfortable beds, sufficient amenities, generous hot water for showers, enough towels, quiet HVAC, good lighting for all needs, entertainment facilities, and security.</p>
+              
+            </div>
+          </div>
+        </div>
+      
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-utensils"></i>
+          <div class="card-body">
+            <h3>Food & Drinks</h3>
+            <p>Food is any substance consumed to provide nutritional support for an organism. A drink or beverage is a liquid intended for human consumption. We will provide the customers need food and drinks with variety of cuisines. Try it..</p>
+            
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-bullhorn"></i>
+          <div class="card-body">
+            <h3>Safty Guide</h3>
+            <p>A safety manual is a collection of information, instructions, policies, and procedures intended to ensure the safe operation of any tools, machinery, chemicals, or food that you use, as well as safe conduct in the workplace.</p>
+            
+          </div>
+        </div>
+        
+      </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <i class="fas fa-globe-asia"></i>
+            <div class="card-body">
+              <h3>Around The World</h3>
+              <p>In its most general sense, the term "world" refers to the totality of entities, to the whole of reality or to everything that is. The nature of the world has been conceptualized differently in different fields.</p>
+              
+            </div>
+          </div>
+        </div>
+      
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-plane"></i>
+          <div class="card-body">
+            <h3>Fastest Travel</h3>
+            <p>A comfortable Travel will be provided for the customers with food and  customers needs. Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life.</p>
+            
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-hiking"></i>
+          <div class="card-body">
+            <h3>Adventures</h3>
+            <p>Adventure is a type of tourism in which tourists engage in activities such as trekking, climbing, rafting, or the likes. Adventure tourism gains much of its excitement by allowing the tourist to step outside their comfort zone.</p>
+            
+          </div>
+        </div>
+        
+      </div>
+      </div>
+  </div>
+    
+    </section>
+    <!-- section gallery start -->
+    <section class="gallary" id="gallary">
+      <div class="container">
+        <div class="main-txt">
+          <h1><span>G</span>allery</h1>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+           <div class="card">
+            <img src="./images/g1.jpg" alt="">
+           </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+             <img src="./images/g2.jpg" alt="">
+            </div>
+           </div>
+           <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+             <img src="./images/g3.jpg" alt="">
+            </div>
+           </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+           <div class="card">
+            <img src="./images/g4.jpg" alt="">
+           </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+             <img src="./images/g5.jpg" alt="">
+            </div>
+           </div>
+           <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+             <img src="./images/g6.jpg" alt="">
+            </div>
+           </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+           <div class="card">
+            <img src="./images/g7.jpg" alt="">
+           </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+             <img src="./images/g8.jpg" alt="">
+            </div>
+           </div>
+           <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+             <img src="./images/g9.webp" alt="">
+            </div>
+           </div>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="main-txt">
+          <h1>About <span>Us</span></h1>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/a1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <h2>How Travel Agency Work</h2>
+          <p>The primary role of our travel agent is to help people make travel arrangements, which might include booking flights, hotels, sightseeing tours, and making dining recommendations. A travel agent assesses each customer's unique needs, preferences, and budget to ensure their trip goes as smoothly as possible.</p>
+          <button id="about-btn">Read More..</button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+      <h1><span>T</span>ravel</h1>
+      <p>Unlocking extraordinary experiences in breathtaking destinations. Let us be your passport to unforgettable memories #travel</p>
+      <div class="social-links">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest"></i>
+      </div>
+      <div class="credit">
+        <p>Designed by <a href="#">_ann_sandra_</a></p>
+      </div>
+      <div class="copyright">
+        <p>&copy;Copyright _ann_sandra_. All Rights Reserved</p>
+      </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
